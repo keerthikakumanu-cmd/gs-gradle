@@ -23,7 +23,7 @@ node {
         // Safely masks your user token into the environment variable '$sonarLogin'
         withCredentials([string(credentialsId: 'sonarqube-token', variable: 'sonarLogin')]) {
             sh "${scannerHome}/bin/sonar-scanner " +
-               "-Dsonar.host.url=http://sonarqube:9000 " +
+               "-Dsonar.host.url=http://139.59.33.34:9000 " +
                "-Dsonar.token='${sonarLogin}' " +
                "-Dsonar.projectName=gs-gradle " +
                "-Dsonar.projectVersion=${BUILD_NUMBER} " +
